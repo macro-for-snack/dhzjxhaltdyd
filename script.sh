@@ -8,6 +8,7 @@ min_val=1
 max_val=5
 mod_val=`echo "$max_val - $min_val + 1" | bc`
 random_val=`echo "($RANDOM % $mod_val) + $min_val" | bc`
+echo $random_val
 
 for ((i=0;i<$random_val;i++))
 do
