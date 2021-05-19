@@ -9,10 +9,11 @@ jobs:
     name: "Test"
     before_install:
       # Setting Environment
-      - git clone $GIT_HTTPS
+      - git clone $GIT_HTTPS -q
       - cd macro-commit-repository
+      - git init -q
     script:
       - echo $(TZ=":Asia/Seoul" date '+%Y--%m--%d_%H:%M:%S') >> commit.txt
-      - git add .
-      - git commit -m $(TZ=":Asia/Seoul" date '+%Y--%m--%d_%H:%M:%S')
-      - git push origin master
+      - git add . -q
+      - git commit -m $(TZ=":Asia/Seoul" date '+%Y--%m--%d_%H:%M:%S') -q
+      - git push origin master -q
