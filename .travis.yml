@@ -16,8 +16,5 @@ jobs:
       - echo $(TZ=":Asia/Seoul" date '+%Y--%m--%d_%H:%M:%S') >> commit.txt
       - ls
       - git add commit.txt
-      - git commit -m "asdf"
-      - git config user.name $USERNAME
-      - git config user.email $USERMAIL
-      - git config user.password $PASSWORD
+      - git commit -m $(TZ=":Asia/Seoul" date '+%Y--%m--%d_%H:%M:%S')
       - git push -u origin master
