@@ -15,5 +15,7 @@ do
   echo $(TZ=":Asia/Seoul" date '+%Y--%m--%d_%H:%M:%S') >> commit.txt
   git add .
   git commit -m $(TZ=":Asia/Seoul" date '+%Y--%m--%d_%H:%M:%S')
+  git config user.name $USERNAME
+  git config user.email $USERMAIL
   git push -u origin master
 done
