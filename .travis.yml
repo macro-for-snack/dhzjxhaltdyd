@@ -15,6 +15,6 @@ jobs:
     script:
       - echo $(TZ=":Asia/Seoul" date '+%Y--%m--%d_%H:%M:%S') >> commit.txt
       - git add .
-      - git commit -m $(TZ=":Asia/Seoul" date '+%Y--%m--%d_%H:%M:%S') -q
+      - git commit -m $(TZ=":Asia/Seoul" date '+%Y--%m--%d_%H:%M:%S')
       - git remote add origin "github.com/ounols/macro-commit-repository.git"
       - git push -u origin master
