@@ -14,10 +14,10 @@ jobs:
       - git init -q
     script:
       - echo $(TZ=":Asia/Seoul" date '+%Y--%m--%d_%H:%M:%S') >> commit.txt
-      - git add .
-      - git commit -m $(TZ=":Asia/Seoul" date '+%Y-%m-%d-%H-%M-%S')
+      - ls
+      - git add commit.txt
+      - git commit -m "asdf"
       - git config user.name $USERNAME
       - git config user.email $USERMAIL
       - git config user.password $PASSWORD
-      - git remote add origin "github.com/macro-commit-repository.git"
       - git push -u origin master
