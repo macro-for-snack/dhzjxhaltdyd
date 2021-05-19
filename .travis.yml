@@ -10,7 +10,7 @@ jobs:
     before_install:
       # Setting Environment
       - sudo apt-get update
-      - git config --global user.name $USERNAME
+      - git config --global user.name $USEREMAIL
       - git config --global user.email $USEREMAIL
       - git config --global user.password $PASSWORD
       - git clone $GIT_HTTPS
