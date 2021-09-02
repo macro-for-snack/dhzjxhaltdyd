@@ -5,7 +5,7 @@ git init -q
 
 RANDOM=`date "+%N"`
 min_val=0
-max_val=2
+max_val=4
 mod_val=`echo "$max_val - $min_val + 1" | bc`
 random_val=`echo "($RANDOM % $mod_val) + $min_val" | bc`
 echo $random_val
