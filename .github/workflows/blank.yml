@@ -24,6 +24,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      
+      - name: Git config
+        run: |
+          git config --global user.email "ounols@naver.com"
+          git config --global user.name "ounols"
 
       # Runs a single command using the runners shell
       - name: Get GIT
