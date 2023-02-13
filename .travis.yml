@@ -2,7 +2,6 @@ language: cpp
 dist: bionic
 os:
   - linux
-
 jobs:
   include:
     stage: Test
